@@ -33,8 +33,8 @@ type
     btnStart: TButton;
     procedure btnStartClick(Sender: TObject);
   private
-    procedure DoSomethingWithTheCake(Cake: TCake);
-    procedure EatThis(Cake: TCake);
+    procedure DoSomethingWithTheCake(const ACake: TCake);
+    procedure EatThis(const ACake: TCake);
     { Private-Deklarationen }
   public
     { Public-Deklarationen }
@@ -49,20 +49,20 @@ implementation
 
 procedure TForm1.btnStartClick(Sender: TObject);
 var
-  Cake: TCake;
+  vCake: TCake;
 begin
-  Cake := TCake.Create;
-  DoSomethingWithTheCake(Cake);
+  vCake := TCake.Create;
+  DoSomethingWithTheCake(vCake);
 end;
 
 
-procedure TForm1.DoSomethingWithTheCake(Cake: TCake);
+procedure TForm1.DoSomethingWithTheCake(const ACake: TCake);
 begin
-  Cake.Sort := 'Nougat';
-  EatThis(Cake);
+  ACake.Sort := 'Nougat';
+  EatThis(ACake);
 end;
 
-procedure TForm1.EatThis(Cake: TCake);
+procedure TForm1.EatThis(const ACake: TCake);
 begin
   //...
 end;
