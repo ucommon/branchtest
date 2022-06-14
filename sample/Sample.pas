@@ -55,7 +55,7 @@ end;
 procedure TForm1.DoSomethingWithTheCake(Cake: TCake);
 begin
   Cake.Sort := 'Nougat';
-  DoSomethingWithTheCake(Cake);
+  EatThis(Cake);
 end;
 
 procedure TForm1.EatThis(Cake: TCake);
