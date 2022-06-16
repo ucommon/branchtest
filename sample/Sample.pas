@@ -1,5 +1,5 @@
-{****************************************************************************************************************************
-  Copyright (c) 2022 Häcker Automation GmbH. All rights reserved.
+ï»¿{****************************************************************************************************************************
+  Copyright (c) 2022 Hï¿½cker Automation GmbH. All rights reserved.
   https://haecker-automation.de
 ****************************************************************************************************************************}
 unit Sample;
@@ -34,7 +34,7 @@ type
     procedure btnStartClick(Sender: TObject);
   private
     procedure DoSomethingWithTheCake(const ACake: TCake);
-    procedure EatThis(const ACake: TCake);
+    procedure EatThisorThat(const ACake: TCake);
     { Private-Deklarationen }
   public
     { Public-Deklarationen }
@@ -59,12 +59,15 @@ end;
 procedure TForm1.DoSomethingWithTheCake(const ACake: TCake);
 begin
   ACake.Sort := 'Nougat';
-  EatThis(ACake);
+  EatThisorThat(ACake);
 end;
 
-procedure TForm1.EatThis(const ACake: TCake);
+procedure TForm1.EatThisorThat(const ACake: TCake);
+var
+  vFavouriteSort: string;
 begin
-  //...
+  vFavouriteSort := ACake.Sort;
+  ACake.Sort := 'Marzipan';
 end;
 
 end.
