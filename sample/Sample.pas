@@ -63,8 +63,12 @@ begin
 end;
 
 procedure TForm1.EatThisorThat(const ACake: TCake);
+var
+  vSort: string;
 begin
-  //...
+  vSort := ACake.Sort;
+  ACake.Sort := 'Marzipan';
+  // ...
 end;
 
 end.
