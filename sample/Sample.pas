@@ -67,8 +67,7 @@ var
   vFavouriteSort: string;
 begin
   vFavouriteSort := ACake.Sort;
-  ACake.Sort := 'Strawberry';
-  // ...
+  ACake.Sort := 'Marzipan';
 end;
 
 end.
