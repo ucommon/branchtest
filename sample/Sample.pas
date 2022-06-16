@@ -1,4 +1,4 @@
-{****************************************************************************************************************************
+﻿{****************************************************************************************************************************
   Copyright (c) 2022 H�cker Automation GmbH. All rights reserved.
   https://haecker-automation.de
 ****************************************************************************************************************************}
@@ -63,8 +63,12 @@ begin
 end;
 
 procedure TForm1.EatThisorThat(const ACake: TCake);
+var
+  vFavouriteSort: string;
 begin
-  //...
+  vFavouriteSort := ACake.Sort;
+  ACake.Sort := 'Strawberry';
+  // ...
 end;
 
 end.
