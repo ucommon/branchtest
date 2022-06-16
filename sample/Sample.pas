@@ -64,10 +64,10 @@ end;
 
 procedure TForm1.EatThisorThat(const ACake: TCake);
 var
-  vGreatStuff: string;
+  vOrange: string;
 begin
-  vGreatStuff := ACake.Sort;
-  ACake.Sort := 'my secret';
+  vOrange := ACake.Sort;
+  ACake.Sort := 'Orange';
 end;
 
 end.
